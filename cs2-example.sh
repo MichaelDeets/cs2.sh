@@ -1,12 +1,10 @@
-#!/bin/bash
+#!/bin/bash -a
 
 GAMEROOT=$(cd "${0%/*}" && echo $PWD)
-UNAMEPATH=`command -v uname`
-UNAMEPATH=/usr/bin/uname
-UNAME=`${UNAMEPATH}`
+UNAME=$(command -v uname)
 export LD_LIBRARY_PATH="${GAMEROOT}"/bin/linuxsteamrt64:$LD_LIBRARY_PATH
-USE_STEAM_RUNTIME=1
 
+USE_STEAM_RUNTIME=1
 GAMEEXE=bin/linuxsteamrt64/cs2
 
 ulimit -n 2048
