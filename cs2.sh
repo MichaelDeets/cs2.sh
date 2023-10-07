@@ -12,7 +12,7 @@ export LD_LIBRARY_PATH="${GAMEROOT}"/bin/linuxsteamrt64:$LD_LIBRARY_PATH
 export ENABLE_PATHMATCH=1
 export SDL_VIDEO_DRIVER=x11
 
-LAUNCHOPTS="-nojoy -no-browser"
+LAUNCHOPTS="-nojoy"
 
 . ~/.cs2/pre.sh
 cd "$GAMEROOT"
